@@ -1,0 +1,6 @@
+tile.icy_tnt.name=Icy TNT
+item.ice_bucket.name=Ice Bucket
+desc.icy_tnt.name=Icy TNT
+entity.steve's_ice_bucket.icy_creeper.name=Icy Creeper
+fluid.icy=Icy
+itemGroup.steve's_ice_bucket=Steve's Ice Bucket
