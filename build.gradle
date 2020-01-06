@@ -1,0 +1,42 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url = "https://files.minecraftforge.net/maven" }
+    }
+    dependencies {
+        classpath "net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT"
+    }
+}
+
+def mcVersion = project.mc_version
+
+apply plugin: "net.minecraftforge.gradle.forge"
+
+version = project.version
+group = "stevekung.mods.steveicebucket"
+archivesBaseName = "SteveIceBucket-All"
+sourceCompatibility = targetCompatibility = 1.8
+
+minecraft {
+    version = "${forge_version}"
+    runDir = "run"
+    mappings = "${mcp_mapping}"
+    makeObfSourceJar = false
+}
+
+dependencies {
+    deobfCompile "stevekungs-lib:SteveKunG's-Lib-1.12.2:1.1.5:deobf"
+}
+
+repositories {
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+    maven {
+        url = "https://minecraft.curseforge.com/api/maven/"
+    }
+}
+
+jar {
+    baseName = "SteveIceBucket-" + mcVersion
+}
